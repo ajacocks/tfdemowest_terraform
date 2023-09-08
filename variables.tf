@@ -42,6 +42,6 @@ variable "instance_type" {
 }
 
 variable "awskey" {
-  type = string
+  type      = string
   sensitive = true
 }
