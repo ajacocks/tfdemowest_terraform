@@ -6,9 +6,12 @@ resource "aws_instance" "dbserver" {
   vpc_security_group_ids      = [aws_security_group.tfsg.id]
   subnet_id                   = aws_subnet.public_subnet.id
   associate_public_ip_address = true
-  tags = {
-    Name = "dbserver-tf"
-  }
+  tags = merge(local.tags,
+    {
+      Name = "dbserver-tf",
+      Type = "dbservers"
+    }
+  )
 }
 
 resource "aws_instance" "webserver" {
@@ -18,7 +21,10 @@ resource "aws_instance" "webserver" {
   vpc_security_group_ids      = [aws_security_group.tfsg.id]
   subnet_id                   = aws_subnet.public_subnet.id
   associate_public_ip_address = true
-  tags = {
-    Name = "webserver-tf"
-  }
+  tags = merge(local.tags,
+    {
+      Name = "webserver-tf",
+      Type = "webservers"
+    }
+  )
 }
