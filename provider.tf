@@ -10,11 +10,12 @@ terraform {
 provider "aws" {
   default_tags {
     tags = {
-      AlwaysUp  = var.alwaysup
-      Name      = var.user_name
-      CreatedBy = var.created_by
-      Contact   = var.my_email_address
-      DeleteBy  = var.deleteby
+      AlwaysUp    = var.alwaysup
+      Name        = var.user_name
+      CreatedBy   = var.created_by
+      Contact     = var.my_email_address
+      DeleteBy    = var.deleteby
+      Environment = var.env_name
     }
   }
 }
