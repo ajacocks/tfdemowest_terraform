@@ -39,9 +39,12 @@ variable "subnet_cidr" {
   default = "10.10.10.0/24"
 }
 
-
 variable "instance_type" {
   type = string
   default = "t2.micro"
 }
 
+variable "awskey" {
+  type    = string
+  default = "ssh-rsa"
+}
