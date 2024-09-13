@@ -12,7 +12,7 @@ data "aws_ami" "rhel_image" {
   }
   filter {
     name = "name"
-    values = ["RHEL-7*"]
+    values = ["RHEL-9*"]
   }
 }
 
