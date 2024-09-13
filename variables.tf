@@ -50,5 +50,4 @@ variable "awskey" {
 
 variable "environment" {
   type = string
-  default = "ajacocks-test"
 }
