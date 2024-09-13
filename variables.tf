@@ -47,3 +47,8 @@ variable "instance_type" {
 variable "awskey" {
   type    = string
 }
+
+variable "environment" {
+  type = string
+  default = "ajacocks-test"
+}
